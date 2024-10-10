@@ -9,3 +9,6 @@
  - docker run -d --name deo-sonarqube --network deo-network --restart unless-stopped -p 9000:9000 sonarqube:10.7.0-community
 
 Sonar password: DEO!admin123
+Sonar token: sqp_d04480cd8eca579b308b0286a5beb0006c9b1a28
+Sonar key: Deo.WebApp
+Sonar Host: http://deo-sonarqube:9000
