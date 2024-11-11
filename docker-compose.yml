@@ -1,0 +1,11 @@
+services:
+  deo-backend:
+    image: deo-backend:latest
+    build: Deo.Backend
+  deo-frontend:
+    image: deo-frontend:latest
+    build: Deo.Frontend
+    ports:
+      - 8080:8080
+    environment:
+      - DEO_BACKEND_URL=http://deo-backend:8080
