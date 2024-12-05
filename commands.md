@@ -13,3 +13,9 @@ Sonar token: sqp_d04480cd8eca579b308b0286a5beb0006c9b1a28
 New: sqp_67bf7eb9cfa394f347e068d1f7e393819c0f0dc0
 Sonar key: Deo.WebApp
 Sonar Host: http://deo-sonarqube:9000
+
+
+docker image tag deo-backend ghcr.io/stadler-pascal/deo-backend:latest
+docker image tag deo-frontend ghcr.io/stadler-pascal/deo-frontend:latest
+docker push ghcr.io/stadler-pascal/deo-backend:latest
+docker push ghcr.io/stadler-pascal/deo-frontend:latest
