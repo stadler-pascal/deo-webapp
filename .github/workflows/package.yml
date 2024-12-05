@@ -19,6 +19,7 @@ jobs:
         permissions: 
             contents: read
             packages: write
+            id-token: write
             attestations: write
         steps:
           - name: Check out repository code
@@ -53,6 +54,7 @@ jobs:
         permissions: 
             contents: read
             packages: write
+            id-token: write
             attestations: write
         steps:
           - name: Check out repository code
