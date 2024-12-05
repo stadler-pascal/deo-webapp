@@ -6,6 +6,6 @@ services:
     image: deo-frontend:latest
     build: Deo.Frontend
     ports:
-      - 8080:8080
+      - 8080:4000
     environment:
-      - DEO_BACKEND_URL=http://deo-backend:8080
+      - DEO_BACKEND_URL=http://deo-backend:5000

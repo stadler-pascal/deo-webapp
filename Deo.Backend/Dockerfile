@@ -16,7 +16,7 @@ WORKDIR /app
 
 COPY --from=builder /app-build/bin/Release/net8.0/publish .
 
-ENV ASPNETCORE_URLS=http://*:8080
-EXPOSE 8080
+ENV ASPNETCORE_URLS=http://*:5000
+EXPOSE 5000
 
 ENTRYPOINT [ "/app/Deo.Backend"]
