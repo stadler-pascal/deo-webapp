@@ -1,0 +1,30 @@
+name: Release Pipeline
+
+run-name: Run triggered by ${{ github.actor }} 🏷️
+
+#on: [push, workflow_dispatch]
+on: 
+    push:
+        tags:
+            - v*
+
+jobs:
+  build:
+    runs-on: self-hosted
+    env:
+      DOTNET_INSTALL_DIR: /home/actions-runner/dotnet
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Set up .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8
+      - name: Create Release
+        id: create_release
+        uses: comnoco/create-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
