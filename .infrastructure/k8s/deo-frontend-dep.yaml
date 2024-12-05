@@ -18,6 +18,7 @@ spec:
       containers:
       - name: deo-frontend
         image: ghcr.io/jkarder/deo-webapp-frontend:latest
+        args: ["--urls", "http://*:4000"]
         ports:
         - containerPort: 4000
         env:
