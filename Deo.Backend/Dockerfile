@@ -19,4 +19,6 @@ COPY --from=builder /app-build/bin/Release/net8.0/publish .
 ENV ASPNETCORE_URLS=http://*:5000
 EXPOSE 5000
 
+LABEL org.opencontainers.image.source=https://github.com/stadler-pascal/deo-webapp
+
 ENTRYPOINT [ "/app/Deo.Backend"]
