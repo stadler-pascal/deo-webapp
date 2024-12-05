@@ -13,11 +13,11 @@ spec:
       labels:
         app: deo-frontend
     spec:
-      imagePullSecrets:
-      - name: ghcr-login-secret
+#      imagePullSecrets:
+#      - name: ghcr-login-secret
       containers:
       - name: deo-frontend
-        image: ghcr.io/stadler-pascal/deo-webapp-frontend:latest
+        image: ghcr.io/jkarder/deo-webapp-frontend:latest
         ports:
         - containerPort: 4000
         env:
