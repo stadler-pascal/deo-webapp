@@ -10,16 +10,12 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     env:
       DOTNET_INSTALL_DIR: /home/actions-runner/dotnet
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-      - name: Set up .NET 8
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: 8
       - name: Create Release
         id: create_release
         uses: elgohr/Github-Release-Action@v5
