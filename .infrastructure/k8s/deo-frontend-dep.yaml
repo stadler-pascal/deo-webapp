@@ -18,9 +18,8 @@ spec:
       containers:
       - name: deo-frontend
         image: ghcr.io/stadler-pascal/deo-webapp-frontend:latest
-        args: ["--urls", "http://*:2000"]
         ports:
-        - containerPort: 2000
+        - containerPort: 4000
         env:
         - name: DEO_BACKEND_URL
-          value: "http://deo-backend-svc:3000"
+          value: "http://deo-backend-svc:5000"
