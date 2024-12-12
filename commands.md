@@ -19,3 +19,5 @@ docker image tag deo-backend ghcr.io/stadler-pascal/deo-backend:latest
 docker image tag deo-frontend ghcr.io/stadler-pascal/deo-frontend:latest
 docker push ghcr.io/stadler-pascal/deo-backend:latest
 docker push ghcr.io/stadler-pascal/deo-frontend:latest
+
+# argo creds: admin | deo12345678
